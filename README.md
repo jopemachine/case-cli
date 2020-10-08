@@ -1,7 +1,7 @@
-## Case-cli [![Build Status](https://travis-ci.com/jopemachine/case-cli.svg?branch=main)](https://travis-ci.com/jopemachine/case-cli)
+# Case-cli [![Build Status](https://travis-ci.com/jopemachine/case-cli.svg?branch=main)](https://travis-ci.com/jopemachine/case-cli)
 
+> cli wrapper for [Case](https://github.com/nbubna/Case) 
 
-cli wrapper for [Case](https://github.com/nbubna/Case) 
 
 ## Usage
 
