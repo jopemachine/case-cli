@@ -1,6 +1,6 @@
 ## Case-cli
 
-cli wrapper for [Case] https://github.com/nbubna/Case  
+cli wrapper for [Case](https://github.com/nbubna/Case) 
 
 ## Usage
 
@@ -25,7 +25,7 @@ cli wrapper for [Case] https://github.com/nbubna/Case
         >> hello_world
 ```
 
-The first factor is `option`, and the remaining strings are recognized as one string value.
+The first argument is `option`, and the remaining strings are recognized as one string value.
 
 ## Options
 
