@@ -1,0 +1,24 @@
+{
+  "name": "case-convert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jopemachine/case-convert.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jopemachine/case-convert/issues"
+  },
+  "homepage": "https://github.com/jopemachine/case-convert#readme",
+  "dependencies": {
+    "case": "^1.6.3",
+    "chalk": "^4.1.0",
+    "meow": "^7.1.1"
+  }
+}
