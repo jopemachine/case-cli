@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const chalk = require('chalk')
 const Case = require('case')
+const helpString = require('./help')
 
 module.exports = (type, ...srcs) => {
   let printResult = ''
@@ -51,6 +52,9 @@ module.exports = (type, ...srcs) => {
     case 'sen':
     case 'sentence':
       writeLog(Case.sentence(src), chalk.yellow)
+      break
+    default:
+      writeLog(helpString, chalk.white)
       break
   }
 
