@@ -7,6 +7,20 @@ Usage
 
     case-cli [option] input
 
+Possible options
+
+    upper
+    lower
+    snake
+    kebab
+    header
+    camel
+    constant
+    pascal
+    random
+    title
+    sentence
+
 Examples
 
     case-cli snake hello, world!
