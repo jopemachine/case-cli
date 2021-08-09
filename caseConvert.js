@@ -34,6 +34,9 @@ module.exports = (type, ...srcs) => {
       writeLog(Case.header(src), chalk.yellow)
       break
     case 'c':
+    case 'camel':
+      writeLog(Case.camel(src), chalk.yellow)
+      break
     case 'constant':
       writeLog(Case.constant(src), chalk.yellow)
       break
@@ -49,7 +52,6 @@ module.exports = (type, ...srcs) => {
     case 'title':
       writeLog(Case.title(src), chalk.yellow)
       break
-    case 'sen':
     case 'sentence':
       writeLog(Case.sentence(src), chalk.yellow)
       break

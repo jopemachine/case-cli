@@ -1,5 +1,7 @@
 # Case-cli [![Build Status](https://travis-ci.com/jopemachine/case-cli.svg?branch=main)](https://travis-ci.com/jopemachine/case-cli)
 
+[![NPM download total](https://img.shields.io/npm/dt/case-cli)](http://badge.fury.io/js/case-cli)
+
 > cli wrapper for [Case](https://github.com/nbubna/Case) 
 
 
@@ -13,7 +15,21 @@
     Usage
 
         case-cli [option] input
-    
+
+    Possible options
+
+        upper
+        lower
+        snake
+        kebab
+        header
+        camel
+        constant
+        pascal
+        random
+        title
+        sentence
+
     Examples
 
         case-cli snake hello, world!
