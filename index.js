@@ -10,4 +10,8 @@ const cli = meow(chalk.white(helpString), {})
 
 const [type, ...inputs] = cli.input
 
-clipboardy.writeSync(caseConvert(type, inputs))
+const ret = caseConvert(type, inputs)
+
+if (typeof ret === 'string') {
+  clipboardy.writeSync(ret)
+}

@@ -6,7 +6,11 @@ Outline
 
 Usage
 
-    case-cli [option] input
+    To convert case,
+        $ case-cli [option] input
+
+    To set default case,
+        $ case-cli set [option]
 
 Possible options
 
@@ -24,12 +28,12 @@ Possible options
 
 Examples
 
-    case-cli snake hello, world!
+    $ case-cli snake hello, world!
     > hello_world
 
-    case-cli pascal hello, world!
+    $ case-cli pascal hello, world!
     > HelloWorld
 
-    case-cli s hello, world!
+    $ case-cli s hello, world!
     > hello_world
 `
