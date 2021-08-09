@@ -14,7 +14,11 @@
 
     Usage
 
-        case-cli [option] input
+        To convert case,
+            $ case-cli [option] input
+
+        To set default case,
+            $ case-cli set [option]
 
     Possible options
 
