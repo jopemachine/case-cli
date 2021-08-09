@@ -2,8 +2,7 @@
 
 [![NPM download total](https://img.shields.io/npm/dt/case-cli)](http://badge.fury.io/js/case-cli)
 
-> cli wrapper for [Case](https://github.com/nbubna/Case) 
-
+> cli wrapper for [Case](https://github.com/nbubna/Case)
 
 ## Usage
 
@@ -11,6 +10,7 @@
     Outline
 
         String case utility for converting
+        Tip: result string is copied to your clipboard automatically
 
     Usage
 
@@ -18,31 +18,33 @@
 
     Possible options
 
-        upper
-        lower
-        snake
-        kebab
-        header
-        camel
-        constant
-        pascal
-        random
-        title
-        sentence
+        upper      /    STRING CASE UTILITY FOR CONVERTING
+        lower      /    string case utility for converting
+        snake      /    string_case_utility_for_converting
+        kebab      /    string-case-utility-for-converting
+        header     /    String-Case-Utility-For-Converting
+        camel      /    stringCaseUtilityForConverting
+        constant   /    STRING_CASE_UTILITY_FOR_CONVERTING
+        pascal     /    StringCaseUtilityForConverting
+        title      /    String Case Utility for Converting
+        sentence   /    String case utility for converting
+        random     /    random!
 
     Examples
 
         case-cli snake hello, world!
-        >> hello_world
+        > hello_world
 
         case-cli pascal hello, world!
-        >> HelloWorld
+        > HelloWorld
 
         case-cli s hello, world!
-        >> hello_world
+        > hello_world
 ```
 
 The first argument is `option`, and the remaining strings are recognized as one string value.
+
+> **Tip: result string is copied to your clipboard automatically.**
 
 ## Options
 

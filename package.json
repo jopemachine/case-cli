@@ -1,6 +1,6 @@
 {
   "name": "case-cli",
-  "version": "0.0.5",
+  "version": "0.1.2",
   "description": "String case utility for converting",
   "main": "index.js",
   "bin": {
@@ -25,6 +25,7 @@
   "dependencies": {
     "case": "^1.6.3",
     "chalk": "^4.1.0",
+    "clipboardy": "^2.3.0",
     "meow": "^7.1.1"
   },
   "keywords": [
