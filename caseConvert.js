@@ -55,6 +55,7 @@ module.exports = (type, srcs) => {
     case 'camel':
       writeLog(Case.camel(src), chalk.whiteBright)
       break
+
     case 'constant':
       writeLog(Case.constant(src), chalk.whiteBright)
       break
