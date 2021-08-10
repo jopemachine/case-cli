@@ -12,14 +12,14 @@ test("constant case", () => {
   expect(caseConvert("constant", ["hello,", "world!"])).toBe("HELLO_WORLD");
 });
 
+test("kebab case", () => {
+  expect(caseConvert("kebab", ["hello,", "world!"])).toBe("hello-world");
+});
+
 test("upper case", () => {
-  expect(caseConvert("upper", ["hello,", "world!"])).toBe("HELLO WORLD");
+  expect(caseConvert("upper", ["hello,", "world!"])).toBe("HELLO, WORLD!");
 });
 
 test("lower case", () => {
-  expect(caseConvert("lower", ["hello,", "world!"])).toBe("hello world");
-});
-
-test("kebab case", () => {
-  expect(caseConvert("kebab", ["hello,", "world!"])).toBe("hello-world");
+  expect(caseConvert("lower", ["hello,", "world!"])).toBe("hello, world!");
 });

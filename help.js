@@ -2,12 +2,14 @@ module.exports = `
 Outline
 
     String case utility for converting
-    Tip: result string is copied to your clipboard automatically
+
+    Tip: 1 - Result string is copied to your clipboard automatically.
+         2 - If you don't give any input, input would be your clipboard string automatically.
 
 Usage
 
     To convert case,
-        $ case-cli [option] input
+        $ case-cli input --case=[option]
 
     To set default case,
         $ case-cli set [option]
@@ -24,7 +26,7 @@ Possible options
     pascal     /    StringCaseUtilityForConverting
     title      /    String Case Utility for Converting
     sentence   /    String case utility for converting
-    random     /    random!
+    random     /    Random!
 
 Examples
 

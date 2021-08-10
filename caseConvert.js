@@ -2,25 +2,27 @@
 const chalk = require('chalk')
 const Case = require('case')
 const Conf = require('conf');
-const logSymbol = require('log-symbols');
+const logSymbol = require('log-symbols')
+const clipboardy = require('clipboardy')
 const helpString = require('./help')
 
 const config = new Conf();
 
-module.exports = (type, ...srcs) => {
+module.exports = (type, srcs) => {
   let printResult = ''
 
-  const src = srcs.join(' ')
+  let src = srcs.join(' ')
+  if (!src) src = clipboardy.readSync()
 
   const writeLog = (log, color) => {
     console.log(color(logSymbol.success + ' ' + log))
     printResult = log
   }
 
-  if (type === 'set') {
-    config.set('default-case', srcs[0]);
-    writeLog(`Default case is set by '${srcs[0]}'`, chalk.whiteBright);
-    return;
+  if (srcs[0] === 'set') {
+    config.set('default-case', srcs[1])
+    writeLog(`Default case is set by '${srcs[1]}'`, chalk.whiteBright)
+    return
   }
 
   switch (type) {
@@ -78,10 +80,9 @@ module.exports = (type, ...srcs) => {
 
     default: {
       if (config.has('default-case')) {
-        const target = srcs ? type + ' ' + srcs : type;
-        writeLog(Case[config.get('default-case')](target), chalk.whiteBright)
+        writeLog(Case[config.get('default-case')](src), chalk.whiteBright)
       } else {
-        console.log(chalk.whiteBright(helpString));
+        console.log(chalk.whiteBright(helpString))
       }
       break
     }
