@@ -3,7 +3,7 @@ const chalk = require('chalk')
 const Case = require('case')
 const Conf = require('conf');
 const logSymbol = require('log-symbols')
-const clipboardy = require('clipboardy')
+const clipboardy = require('./clipboardyAdapter')
 const helpString = require('./help')
 
 const config = new Conf();
@@ -12,12 +12,22 @@ module.exports = (type, srcs) => {
   let printResult = ''
 
   let src = srcs.join(' ')
-  if (!src) src = clipboardy.readSync()
 
-  const writeLog = (log, color) => {
-    console.log(color(logSymbol.success + ' ' + log))
+  if (!src) {
+    try {
+      src = clipboardy.readSync()
+    } catch (err) {
+      console.error(`${logSymbol.error} ${err.message}`);
+      process.exit(1);
+    }
+  }
+
+  const writeLog = (applyColor) => (log) => {
+    console.log(applyColor(`${logSymbol.success} ${log}`))
     printResult = log
   }
+
+  const writeWhiteLog = writeLog(chalk.whiteBright)
 
   if (srcs[0] === 'set') {
     config.set('default-case', srcs[1])
@@ -28,60 +38,60 @@ module.exports = (type, srcs) => {
   switch (type) {
     case 'u':
     case 'upper':
-      writeLog(Case.upper(src), chalk.whiteBright)
+      writeWhiteLog(Case.upper(src))
       break
 
     case 'l':
     case 'lower':
-      writeLog(Case.lower(src), chalk.whiteBright)
+      writeWhiteLog(Case.lower(src))
       break
 
     case 's':
     case 'snake':
-      writeLog(Case.snake(src), chalk.whiteBright)
+      writeWhiteLog(Case.snake(src))
       break
 
     case 'k':
     case 'kebab':
-      writeLog(Case.kebab(src), chalk.whiteBright)
+      writeWhiteLog(Case.kebab(src))
       break
 
     case 'h':
     case 'header':
-      writeLog(Case.header(src), chalk.whiteBright)
+      writeWhiteLog(Case.header(src))
       break
 
     case 'c':
     case 'camel':
-      writeLog(Case.camel(src), chalk.whiteBright)
-      break
-
-    case 'constant':
-      writeLog(Case.constant(src), chalk.whiteBright)
+      writeWhiteLog(Case.camel(src))
       break
 
     case 'p':
     case 'pascal':
-      writeLog(Case.pascal(src), chalk.whiteBright)
+      writeWhiteLog(Case.pascal(src))
       break
 
     case 'r':
     case 'random':
-      writeLog(Case.random(src), chalk.whiteBright)
+      writeWhiteLog(Case.random(src))
       break
 
     case 't':
     case 'title':
-      writeLog(Case.title(src), chalk.whiteBright)
+      writeWhiteLog(Case.title(src))
+      break
+
+    case 'constant':
+      writeWhiteLog(Case.constant(src))
       break
 
     case 'sentence':
-      writeLog(Case.sentence(src), chalk.whiteBright)
+      writeWhiteLog(Case.sentence(src))
       break
 
     default: {
       if (config.has('default-case')) {
-        writeLog(Case[config.get('default-case')](src), chalk.whiteBright)
+        writeWhiteLog(Case[config.get('default-case')](src))
       } else {
         console.log(chalk.whiteBright(helpString))
       }

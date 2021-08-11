@@ -2,7 +2,7 @@
 
 const meow = require('meow')
 const chalk = require('chalk')
-const clipboardy = require('clipboardy')
+const clipboardy = require('./clipboardyAdapter')
 const caseConvert = require('./caseConvert')
 const helpString = require('./help')
 

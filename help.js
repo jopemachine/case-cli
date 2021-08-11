@@ -3,8 +3,9 @@ Outline
 
 String case utility for converting
 
-Tip: 1 - Result string is copied to your clipboard automatically.
-     2 - If you don't give any input, input would be your clipboard string automatically.
+Tips: 1 - Result string is copied to your clipboard automatically.
+      2 - If you don't give any input, input would be your clipboard string automatically.
+      (This feature not works in headless environment.)
 
 Usage
 

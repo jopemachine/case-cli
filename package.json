@@ -1,7 +1,7 @@
 {
   "name": "case-cli",
-  "version": "0.2.1",
-  "description": "String case utility for converting",
+  "version": "0.2.2",
+  "description": "Convert string case on your terminal as you want",
   "main": "index.js",
   "bin": {
     "case-cli": "./index.js"
@@ -31,6 +31,7 @@
     "meow": "^7.1.1"
   },
   "keywords": [
+    "clipboard",
     "case",
     "cli",
     "case-converter"
