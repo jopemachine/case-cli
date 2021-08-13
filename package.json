@@ -1,6 +1,6 @@
 {
   "name": "case-cli",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Convert string case on your terminal as you want",
   "main": "index.js",
   "exports": "./index.js",

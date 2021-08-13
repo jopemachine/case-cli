@@ -8,13 +8,14 @@ import clipboardy from './clipboardyAdapter.js'
 
 const cli = meow(chalk.white(helpString), {
   importMeta: import.meta,
+  description: false,
   flags: {
     case: {
       type: 'string',
       alias: 'c',
       isRequired: () => false
     },
-  }
+  },
 })
 
 const ret = caseConvert(cli.flags.case, cli.input)
