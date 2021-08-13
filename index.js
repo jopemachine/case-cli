@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-const meow = require('meow')
-const chalk = require('chalk')
-const clipboardy = require('./clipboardyAdapter')
-const caseConvert = require('./caseConvert')
-const helpString = require('./help')
+import meow from 'meow';
+import chalk from 'chalk';
+import caseConvert from './caseConvert.js'
+import helpString from './help.js'
+import clipboardy from './clipboardyAdapter.js'
 
 const cli = meow(chalk.white(helpString), {
+  importMeta: import.meta,
   flags: {
     case: {
       type: 'string',

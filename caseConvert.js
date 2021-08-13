@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-const chalk = require('chalk')
-const Case = require('case')
-const Conf = require('conf');
-const logSymbol = require('log-symbols')
-const clipboardy = require('./clipboardyAdapter')
-const helpString = require('./help')
+import chalk from 'chalk'
+import Case from 'case'
+import Conf from 'conf'
+import logSymbols from 'log-symbols'
+import clipboardy from './clipboardyAdapter.js'
+import helpString from './help.js'
 
 const config = new Conf();
 
-module.exports = (type, srcs) => {
+export default (type, srcs) => {
   let printResult = ''
 
   let src = srcs.join(' ')
@@ -17,13 +17,13 @@ module.exports = (type, srcs) => {
     try {
       src = clipboardy.readSync()
     } catch (err) {
-      console.error(`${logSymbol.error} ${err.message}`);
+      console.error(`${logSymbols.error} ${err.message}`);
       process.exit(1);
     }
   }
 
   const writeLog = (applyColor) => (log) => {
-    console.log(applyColor(`${logSymbol.success} ${log}`))
+    console.log(applyColor(`${logSymbols.success} ${log}`))
     printResult = log
   }
 
@@ -31,7 +31,7 @@ module.exports = (type, srcs) => {
 
   if (srcs[0] === 'set') {
     config.set('default-case', srcs[1])
-    writeLog(`Default case is set by '${srcs[1]}'`, chalk.whiteBright)
+    writeWhiteLog(`Default case is set by '${srcs[1]}'`)
     return
   }
 

@@ -1,4 +1,4 @@
-module.exports = `
+export default `
 Outline
 
 String case utility for converting

@@ -1,8 +1,8 @@
-const clipboardy = require('clipboardy')
+import clipboardy from 'clipboardy'
 
 // clipboardy fails in headless environment (https://github.com/jopemachine/case-cli/issues/1)
 // This adapter handle this error
-module.exports = {
+export default {
   readSync: (str) => {
     try {
       return clipboardy.readSync(str);

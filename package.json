@@ -1,13 +1,18 @@
 {
   "name": "case-cli",
-  "version": "0.2.2",
+  "version": "0.3.1",
   "description": "Convert string case on your terminal as you want",
   "main": "index.js",
+  "exports": "./index.js",
   "bin": {
     "case-cli": "./index.js"
   },
+  "engines": {
+    "node": "12.x"
+  },
+  "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "ava"
   },
   "files": [
     "*.js"
@@ -24,11 +29,11 @@
   "homepage": "https://github.com/jopemachine/case-cli#readme",
   "dependencies": {
     "case": "^1.6.3",
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.2",
     "clipboardy": "^2.3.0",
     "conf": "^10.0.2",
-    "log-symbols": "^4.1.0",
-    "meow": "^7.1.1"
+    "log-symbols": "^5.0.0",
+    "meow": "^10.1.1"
   },
   "keywords": [
     "clipboard",
@@ -37,14 +42,14 @@
     "case-converter"
   ],
   "devDependencies": {
+    "ava": "^3.15.0",
     "eslint": "^7.10.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "husky": "^4.3.0",
-    "jest": "^26.5.2"
+    "husky": "^4.3.0"
   },
   "husky": {
     "hooks": {
