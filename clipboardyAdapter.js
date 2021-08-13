@@ -5,15 +5,15 @@ import clipboardy from 'clipboardy'
 export default {
   readSync: (str) => {
     try {
-      return clipboardy.readSync(str);
+      return clipboardy.readSync(str)
     } catch (err) {
-      throw new Error('Clipboard feature is not supported in headless environment');
+      throw new Error('Clipboard feature is not supported in headless environment')
     }
   },
 
   writeSync: (str) => {
     try {
-      clipboardy.writeSync(str);
+      clipboardy.writeSync(str)
     } catch (err) {
       // do nothing
     }

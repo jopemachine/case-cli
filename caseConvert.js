@@ -6,7 +6,7 @@ import logSymbols from 'log-symbols'
 import clipboardy from './clipboardyAdapter.js'
 import helpString from './help.js'
 
-const config = new Conf();
+const config = new Conf()
 
 export default (type, srcs) => {
   let printResult = ''
@@ -17,8 +17,8 @@ export default (type, srcs) => {
     try {
       src = clipboardy.readSync()
     } catch (err) {
-      console.error(`${logSymbols.error} ${err.message}`);
-      process.exit(1);
+      console.error(`${logSymbols.error} ${err.message}`)
+      process.exit(1)
     }
   }
 
