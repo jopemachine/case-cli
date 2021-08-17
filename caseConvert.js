@@ -6,7 +6,11 @@ import logSymbols from 'log-symbols'
 import clipboardy from './clipboardyAdapter.js'
 import helpString from './help.js'
 
-const config = new Conf()
+const config = new Conf({
+  projectName: 'case-cli',
+  configName: 'case-cli',
+  clearInvalidConfig: true
+})
 
 export default (type, srcs) => {
   let printResult = ''

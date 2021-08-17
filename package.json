@@ -1,6 +1,6 @@
 {
   "name": "case-cli",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "description": "Convert string case on your terminal as you want",
   "main": "index.js",
   "exports": "./index.js",
@@ -8,7 +8,7 @@
     "case-cli": "./index.js"
   },
   "engines": {
-    "node": "12.x"
+    "node": ">=12.x"
   },
   "type": "module",
   "scripts": {
@@ -30,10 +30,12 @@
   "dependencies": {
     "case": "^1.6.3",
     "chalk": "^4.1.2",
-    "clipboardy": "^2.3.0",
     "conf": "^10.0.2",
     "log-symbols": "^5.0.0",
     "meow": "^10.1.1"
+  },
+  "optionalDependencies": {
+    "clipboardy": "^2.3.0"
   },
   "keywords": [
     "clipboard",
