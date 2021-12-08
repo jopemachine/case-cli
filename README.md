@@ -72,3 +72,14 @@ case-cli title 'foo v. bar'                      -> 'Foo v. Bar'
 case-cli sentence '"foo!" said bar', ['Bar']     -> '"Foo!" said Bar'
 case-cli sentence 'the 12 oz. can', null, ['oz']     -> 'The 12 oz. can'
 ```
+
+## Tips
+
+You can create alias which you use frequently like below.
+
+Paste your alias to your `.zshrc`, `.bashrc` or your shell config file.
+
+```shell-script
+alias camel="case-cli -c=camel"
+alias title="case-cli -c=title"
+```
