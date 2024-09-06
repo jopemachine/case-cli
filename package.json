@@ -30,9 +30,9 @@
   "dependencies": {
     "case": "^1.6.3",
     "chalk": "^4.1.2",
-    "conf": "^10.1.0",
+    "conf": "^12.0.0",
     "log-symbols": "^5.0.0",
-    "meow": "^10.1.1"
+    "meow": "^12.1.0"
   },
   "optionalDependencies": {
     "clipboardy": "^2.3.0"
